@@ -144,7 +144,7 @@ def load_data(stock, look_back):
     return [x_train, y_train, x_test, y_test]
 
 if __name__ == '__main__':
-    data = pd.read_csv("/home/amo/dev/sunzulab/API/DL")
+    data = pd.read_csv("/home/API/DL")
     data = data[["Close", "Volume"]]
     x_train, y_train, x_test, y_test = load_data(data, 5)
     x_train = torch.from_numpy(x_train).type(torch.FloatTensor)
