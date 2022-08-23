@@ -289,8 +289,6 @@ class DLModel():
         return testVol
 
 
-
-
 if __name__ == '__main__':
     dataset = load_data('bny','us')
     y, feature1, feature2, feature3, feature4, feature5, feature6 = construct_variables(dataset)
@@ -312,52 +310,4 @@ if __name__ == '__main__':
     trainScore_, testScore_ = DLModel.compute_rmse(trainY, testY, trainPredict, testPredict)
     trainPredictPlot, testPredictPlot = DLModel.shift_predictions(data, trainPredict)
     testVol = DLModel.plot_predictions(scaler1, data, trainPredictPlot, testPredictPlot, testPredict, test_size)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
